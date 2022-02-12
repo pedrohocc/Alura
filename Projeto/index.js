@@ -14,4 +14,4 @@ const gerenteLogado = SistemaAutenticacao.login(gerente, "senha456");
 const mylena = new Cliente("Mylena", 2344349343, 1978);
 const mylenaLogado = SistemaAutenticacao.login(mylena, "1978");
 
-console.log(mylenaLogado, gerenteLogado, diretorLogado);
+console.log(diretorLogado, gerenteLogado, mylenaLogado);

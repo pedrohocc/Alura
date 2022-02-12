@@ -9,8 +9,8 @@ export class Cliente{
         this._senha = senha;
     }
 
-    autenticar(){
-        return true;
+    autenticar(senha){
+        return true
     }
-    
+
 }
