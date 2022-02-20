@@ -1,0 +1,9 @@
+.rodape__link {
+    color: #fdfdfd;
+    text-decoration: none;
+}
+
+.rodape__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
