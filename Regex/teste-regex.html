@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Regex</title>
+    <script>
+
+        var codigos = 'A121B12112C12212F12G01';
+
+        var exp = /[\w]\d+/g;
+
+        var extraido = codigos.match(exp)
+
+        /*
+        var resultado = null;
+
+        while (resultado = exp.exec(anoMesDia)) {
+            
+            console.log(resultado);
+            console.log(exp.lastIndex);
+
+        }
+        */
+    </script>
+</head>
+<body>
+    <form>
+        <input pattern="[0-9]*">
+        <input type="submit" value="Enviar dados">
+    </form>
+</body>
+</html>
