@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,17 +25,17 @@
                 <fieldset>
                     <legend class="formulario__legenda">Informações básicas</legend>
                     <div class="input-container">
-                        <input name="nome" id="nome" class="input" type="text" placeholder="Nome" required>
+                        <input name="nome" id="nome" class="input" type="text" placeholder="Nome" required data-tipo="nome">
                         <label class="input-label" for="nome">Nome</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="email" id="email" class="input" type="email" placeholder="Email" required>
+                        <input name="email" id="email" class="input" type="email" placeholder="Email" required data-tipo="email">
                         <label class="input-label" for="email">Email</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="senha" id="senha" class="input" type="password" placeholder="Senha" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$" title="6 a 12 caracteres; uma letra maiuscula; uma letra minuscula; sem simbolos" required>
+                        <input name="senha" id="senha" class="input" type="password" placeholder="Senha" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$" title="6 a 12 caracteres; uma letra maiuscula; uma letra minuscula; sem simbolos" required data-tipo="senha">
                         <label class="input-label" for="senha">Senha</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
@@ -48,7 +48,7 @@
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF">
+                        <input name="cpf" id="cpf" class="input" type="text" placeholder="CPF" data-tipo="cpf" required>
                         <label class="input-label" for="cpf">CPF</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
@@ -56,22 +56,22 @@
                 <fieldset>
                     <legend class="formulario__legenda">Endereço</legend>
                     <div class="input-container">
-                        <input name="cep" id="cep" class="input" type="text" placeholder="CEP">
+                        <input name="cep" id="cep" class="input" type="text" placeholder="CEP" pattern="[\d]{5}-?[\d]{3}" required data-tipo="cep">
                         <label class="input-label" for="cep">CEP</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="logradouro" id="logradouro" class="input" type="text" placeholder="Logradouro">
+                        <input name="logradouro" id="logradouro" class="input" type="text" placeholder="Logradouro" data-tipo="logradouro" required>
                         <label class="input-label" for="logradouro">Logradouro</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="cidade" id="cidade" class="input" type="text" placeholder="Cidade">
+                        <input name="cidade" id="cidade" class="input" type="text" placeholder="Cidade" data-tipo="cidade" required>
                         <label class="input-label" for="cidade">Cidade</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
                     <div class="input-container">
-                        <input name="estado" id="estado" class="input" type="text" placeholder="Estado">
+                        <input name="estado" id="estado" class="input" type="text" placeholder="Estado" data-tipo="estado" required>
                         <label class="input-label" for="estado">Estado</label>
                         <span class="input-mensagem-erro">Este campo não está válido</span>
                     </div>
