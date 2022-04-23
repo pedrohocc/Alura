@@ -8,6 +8,29 @@
     object-fit: cover;
     height: 80vh;
 }
-.texto-foto {
+.fonte__titulo {
     font-family: 'Pacifico', cursive;
 }
+
+.cor__especial {
+    color: darkred!important;
+}
+
+.botao-cor-especial {
+    background-color: darkred;
+    border-color: black;
+}
+
+.borda-cor-especial {
+    border-color: darkred;
+}
+
+.card-largura {
+    max-width: 18rem;
+}
+
+.card-posicao-imagem {
+    object-fit: cover;
+    height: 200px;
+}
+
