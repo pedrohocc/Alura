@@ -1,13 +1,13 @@
 import { Negociacao } from "./negociacao.js";
 
 export class Negociacoes {
-    private negocicacoes: Array<Negociacao> = [];
+    private negocicacoes: Negociacao[] = [];
 
     adiciona(negociacao: Negociacao) {
         this.negocicacoes.push(negociacao);
     }
 
-    lista(): ReadonlyArray<Negociacao> {
+    lista(): readonly Negociacao[] {
         return this.negocicacoes;
     }
 }

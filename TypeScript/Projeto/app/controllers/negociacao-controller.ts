@@ -19,6 +19,8 @@ export class NegociacaoController {
 
         this.negociacoes.adiciona(negociacao)
 
+        negociacao.data.setTime(12)
+
         console.log(this.negociacoes.lista())
 
         this.limpar()
