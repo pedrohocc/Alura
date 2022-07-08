@@ -1,0 +1,15 @@
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\bin\Debug\net6.0\Laços.exe
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\bin\Debug\net6.0\Laços.deps.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\bin\Debug\net6.0\Laços.runtimeconfig.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\bin\Debug\net6.0\Laços.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\bin\Debug\net6.0\Laços.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\obj\Debug\net6.0\Laços.csproj.AssemblyReference.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\obj\Debug\net6.0\Laços.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\obj\Debug\net6.0\Laços.AssemblyInfoInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\obj\Debug\net6.0\Laços.AssemblyInfo.cs
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\obj\Debug\net6.0\Laços.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\obj\Debug\net6.0\Laços.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\obj\Debug\net6.0\refint\Laços.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\obj\Debug\net6.0\Laços.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\obj\Debug\net6.0\Laços.genruntimeconfig.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Laços\obj\Debug\net6.0\ref\Laços.dll

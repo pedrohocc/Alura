@@ -1,0 +1,15 @@
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\bin\Debug\net6.0\Break.exe
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\bin\Debug\net6.0\Break.deps.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\bin\Debug\net6.0\Break.runtimeconfig.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\bin\Debug\net6.0\Break.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\bin\Debug\net6.0\Break.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\obj\Debug\net6.0\Break.csproj.AssemblyReference.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\obj\Debug\net6.0\Break.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\obj\Debug\net6.0\Break.AssemblyInfoInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\obj\Debug\net6.0\Break.AssemblyInfo.cs
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\obj\Debug\net6.0\Break.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\obj\Debug\net6.0\Break.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\obj\Debug\net6.0\refint\Break.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\obj\Debug\net6.0\Break.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\obj\Debug\net6.0\Break.genruntimeconfig.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\Break\obj\Debug\net6.0\ref\Break.dll

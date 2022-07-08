@@ -1,0 +1,15 @@
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\bin\Debug\net6.0\ForEncadeado.exe
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\bin\Debug\net6.0\ForEncadeado.deps.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\bin\Debug\net6.0\ForEncadeado.runtimeconfig.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\bin\Debug\net6.0\ForEncadeado.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\bin\Debug\net6.0\ForEncadeado.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\obj\Debug\net6.0\ForEncadeado.csproj.AssemblyReference.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\obj\Debug\net6.0\ForEncadeado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\obj\Debug\net6.0\ForEncadeado.AssemblyInfoInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\obj\Debug\net6.0\ForEncadeado.AssemblyInfo.cs
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\obj\Debug\net6.0\ForEncadeado.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\obj\Debug\net6.0\ForEncadeado.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\obj\Debug\net6.0\refint\ForEncadeado.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\obj\Debug\net6.0\ForEncadeado.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\obj\Debug\net6.0\ForEncadeado.genruntimeconfig.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\ForEncadeado\obj\Debug\net6.0\ref\ForEncadeado.dll

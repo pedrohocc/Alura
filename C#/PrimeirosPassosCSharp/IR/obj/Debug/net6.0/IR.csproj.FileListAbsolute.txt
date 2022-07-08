@@ -1,0 +1,15 @@
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\bin\Debug\net6.0\IR.exe
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\bin\Debug\net6.0\IR.deps.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\bin\Debug\net6.0\IR.runtimeconfig.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\bin\Debug\net6.0\IR.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\bin\Debug\net6.0\IR.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\obj\Debug\net6.0\IR.csproj.AssemblyReference.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\obj\Debug\net6.0\IR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\obj\Debug\net6.0\IR.AssemblyInfoInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\obj\Debug\net6.0\IR.AssemblyInfo.cs
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\obj\Debug\net6.0\IR.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\obj\Debug\net6.0\IR.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\obj\Debug\net6.0\refint\IR.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\obj\Debug\net6.0\IR.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\obj\Debug\net6.0\IR.genruntimeconfig.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\IR\obj\Debug\net6.0\ref\IR.dll

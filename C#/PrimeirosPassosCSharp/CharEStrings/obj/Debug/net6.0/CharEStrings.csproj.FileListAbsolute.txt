@@ -1,0 +1,15 @@
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\bin\Debug\net6.0\CharEStrings.exe
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\bin\Debug\net6.0\CharEStrings.deps.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\bin\Debug\net6.0\CharEStrings.runtimeconfig.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\bin\Debug\net6.0\CharEStrings.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\bin\Debug\net6.0\CharEStrings.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\obj\Debug\net6.0\CharEStrings.csproj.AssemblyReference.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\obj\Debug\net6.0\CharEStrings.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\obj\Debug\net6.0\CharEStrings.AssemblyInfoInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\obj\Debug\net6.0\CharEStrings.AssemblyInfo.cs
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\obj\Debug\net6.0\CharEStrings.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\obj\Debug\net6.0\CharEStrings.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\obj\Debug\net6.0\refint\CharEStrings.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\obj\Debug\net6.0\CharEStrings.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\obj\Debug\net6.0\CharEStrings.genruntimeconfig.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CharEStrings\obj\Debug\net6.0\ref\CharEStrings.dll
