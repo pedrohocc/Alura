@@ -1,0 +1,15 @@
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\bin\Debug\net6.0\PontoFlutuante.exe
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\bin\Debug\net6.0\PontoFlutuante.deps.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\bin\Debug\net6.0\PontoFlutuante.runtimeconfig.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\bin\Debug\net6.0\PontoFlutuante.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\bin\Debug\net6.0\PontoFlutuante.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\obj\Debug\net6.0\PontoFlutuante.csproj.AssemblyReference.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\obj\Debug\net6.0\PontoFlutuante.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\obj\Debug\net6.0\PontoFlutuante.AssemblyInfoInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\obj\Debug\net6.0\PontoFlutuante.AssemblyInfo.cs
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\obj\Debug\net6.0\PontoFlutuante.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\obj\Debug\net6.0\PontoFlutuante.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\obj\Debug\net6.0\refint\PontoFlutuante.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\obj\Debug\net6.0\PontoFlutuante.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\obj\Debug\net6.0\PontoFlutuante.genruntimeconfig.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\PontoFlutuante\obj\Debug\net6.0\ref\PontoFlutuante.dll

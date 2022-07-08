@@ -1,0 +1,15 @@
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\bin\Debug\net6.0\CriandoVariaveis.exe
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\bin\Debug\net6.0\CriandoVariaveis.deps.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\bin\Debug\net6.0\CriandoVariaveis.runtimeconfig.json
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\bin\Debug\net6.0\CriandoVariaveis.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\bin\Debug\net6.0\CriandoVariaveis.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.csproj.AssemblyReference.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.AssemblyInfoInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.AssemblyInfo.cs
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.csproj.CoreCompileInputs.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\obj\Debug\net6.0\refint\CriandoVariaveis.dll
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.pdb
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\obj\Debug\net6.0\CriandoVariaveis.genruntimeconfig.cache
+C:\Users\pedro\Documents\GitHub\Alura\C#\PrimeirosPassosCSharp\CriandoVariaveis\obj\Debug\net6.0\ref\CriandoVariaveis.dll
