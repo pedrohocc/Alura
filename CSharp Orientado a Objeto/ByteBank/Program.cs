@@ -1,21 +1,17 @@
 ﻿using ByteBank;
+using ByteBank.Titular;
 
 Console.WriteLine("Bem vindo ao ByteBank, seu banco do futuro!");
 
-ContaCorrente Conta1 = new ContaCorrente();
-Conta1.titular = "Andressa Bessa";
-Conta1.conta = "12345-x";
-Conta1.NumeroAgencia = 12345;
-Conta1.NomeAgencia = "Central";
-Conta1.saldo = 90.55;
+Cliente cliente1 = new Cliente();
+cliente1.Nome = "jorgin";
+cliente1.CPF = "313.213.213-31";
+cliente1.Profissao = "Jogador de paintball";
 
-ContaCorrente Conta2 = new ContaCorrente();
-Conta2.titular = "Andressa Besta";
-Conta2.conta = "12345-x";
-Conta2.NumeroAgencia = 12345;
-Conta2.NomeAgencia = "Central";
-Conta2.saldo = 100;
+ContaCorrente Conta1 = new ContaCorrente("1235-x", 12345);
+ContaCorrente Conta2 = new ContaCorrente("12ds35-x", 125345);
+ContaCorrente Conta3 = new ContaCorrente("123sds5-x", 123495);
 
-Console.WriteLine(Conta2.Informacoes);
+Console.WriteLine(ContaCorrente.contador);
 
 Console.ReadKey();
