@@ -2,6 +2,7 @@ import { Negociacao } from "../models/negociacao.js";
 import { Negociacoes } from "../models/negociacoes.js";
 import { Negociacoesview } from "../views/negociacoes-view.js";
 export class NegociacaoController {
+    
     constructor() {
         this.negociacoes = new Negociacoes();
         this.negociacoesview = new Negociacoesview("#negociacoesview");
