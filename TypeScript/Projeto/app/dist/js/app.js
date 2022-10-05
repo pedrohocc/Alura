@@ -10,3 +10,12 @@ if (form) {
 else {
     throw Error("verifique o form");
 }
+const botaoImportar = document.querySelector('#bnt-importar');
+if (botaoImportar) {
+    botaoImportar.addEventListener('click', () => {
+        controller.importaDados();
+    });
+}
+else {
+    throw Error("Erro na ação de importar ");
+}
