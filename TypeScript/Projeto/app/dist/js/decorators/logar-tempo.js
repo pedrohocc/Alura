@@ -17,3 +17,4 @@ export function tempoExecucao(EmSegundos = false) {
         return descriptor;
     };
 }
+//# sourceMappingURL=logar-tempo.js.map

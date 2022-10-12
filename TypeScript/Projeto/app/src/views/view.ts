@@ -1,5 +1,5 @@
 import { inspect } from '../decorators/inspect.js';
-import { tempoExecucao } from '../decorators/logar-tempo.js';
+import { logarTempoDeExecucao } from '../decorators/logar-tempo-de-execucao.js';
 
 export abstract class View<T> {
 
@@ -9,14 +9,11 @@ export abstract class View<T> {
         const elemento = document.querySelector(seletor);
         if (elemento) {
             this.elemento = elemento as HTMLElement;
-        }else {
-            throw Error ("seletor invalido")
-            
+        } else {
+            throw Error(`Seletor ${seletor} não existe no DOM. Verifique`);
         }
     }
 
-    @tempoExecucao()
-    @inspect
     public update(model: T): void {
         let template = this.template(model);
         this.elemento.innerHTML = template;
