@@ -2,12 +2,11 @@ import 'package:http_interceptor/http_interceptor.dart';
 import 'package:logger/logger.dart';
 
 class LoggingInterceptor implements InterceptorContract {
-  Logger logger = Logger();
+  Logger logger = Logger(printer: PrettyPrinter(methodCount: 0));
 
   @override
   Future<RequestData> interceptRequest({required RequestData data}) async {
-    logger.v(
-        'Request for: ${data.baseUrl}\nHeaders: ${data.headers}\nBody: ${data.body}');
+    logger.v("Requisição para: ${data.baseUrl}\n${data.headers}");
     return data;
   }
 
@@ -15,10 +14,10 @@ class LoggingInterceptor implements InterceptorContract {
   Future<ResponseData> interceptResponse({required ResponseData data}) async {
     if (data.statusCode ~/ 100 == 2) {
       logger.i(
-          'Response of: ${data.url}\nHeaders: ${data.headers}\nBody: ${data.body}\nStatus code: ${data.statusCode}');
+          "Resposta de ${data.url}\n${data.headers}\n${data.statusCode}\n ${data.body}");
     } else {
       logger.e(
-          'Response of: ${data.url}\nHeaders: ${data.headers}\nBody: ${data.body}\nStatus code: ${data.statusCode}');
+          "Resposta de ${data.url}\n${data.headers}\n${data.statusCode}\n ${data.body}");
     }
     return data;
   }

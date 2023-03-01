@@ -1,5 +1,3 @@
-import 'package:flutter_webapi_first_course/services/journal_service.dart';
-
 class Journal {
   String id;
   String content;
@@ -12,7 +10,6 @@ class Journal {
     required this.createdAt,
     required this.updatedAt,
   });
-
 
   @override
   String toString() {

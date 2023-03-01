@@ -1,28 +1,25 @@
+import 'package:flutter_webapi_first_course/services/http_interceptors.dart';
 import 'package:http/http.dart' as http;
 import 'package:http_interceptor/http/http.dart';
 
-import 'http_interceptors.dart';
-
 class JournalService {
-  static const String url = "http://192.168.15.102:3000/";
+  static const String url = "http://192.168.0.11:3000/";
   static const String resource = "learnhttp/";
 
-  http.Client client =
-      InterceptedClient.build(interceptors: [LoggingInterceptor()]);
+  http.Client client = InterceptedClient.build(
+    interceptors: [LoggingInterceptor()],
+  );
 
-  Uri getUrl() {
-    return Uri.parse("$url$resource");
+  String getURL() {
+    return "$url$resource";
   }
 
-  void register(String element) {
-    client.post(
-      getUrl(),
-      body: {"teste": element},
-    );
+  //TODO: Substituir getURL por getURI
+  void register(String content) {
+    client.post(Uri.parse(getURL()), body: {'content': content});
   }
 
-  Future<String> get() async {
-    http.Response response = await client.get(getUrl());
-    return response.body;
+  void get() async {
+    http.Response response = await client.get(Uri.parse(getURL()));
   }
 }
