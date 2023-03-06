@@ -9,8 +9,7 @@ void main() {
   runApp(const MyApp());
 
   JournalService journalService = JournalService();
-  journalService.register("Olá mundo!");
-  //journalService.get();
+  journalService.register(Journal.empty());
 }
 
 class MyApp extends StatelessWidget {
@@ -28,19 +27,24 @@ class MyApp extends StatelessWidget {
             elevation: 0,
             backgroundColor: Colors.black,
             titleTextStyle: TextStyle(color: Colors.white),
-            actionsIconTheme: IconThemeData(color: Colors.white)),
+            actionsIconTheme: IconThemeData(color: Colors.white),
+            iconTheme: IconThemeData(color: Colors.white)),
         textTheme: GoogleFonts.bitterTextTheme(),
       ),
-      initialRoute: "add-journal",
+      initialRoute: "home",
       routes: {
         "home": (context) => const HomeScreen(),
-        "add-journal": (context) => AddJournalScreen(
-              journal: Journal(
-                  id: "id",
-                  content: "content",
-                  createdAt: DateTime.now().toLocal(),
-                  updatedAt: DateTime.now().toLocal()),
-            )
+      },
+      onGenerateRoute: (settings) {
+        if (settings.name == "add-journal") {
+          final Journal journal = settings.arguments as Journal;
+          return MaterialPageRoute(
+            builder: (context) {
+              return AddJournalScreen(journal: journal);
+            },
+          );
+        }
+        return null;
       },
     );
   }
