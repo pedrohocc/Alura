@@ -2,78 +2,53 @@ import 'package:flutter/material.dart';
 import 'package:flutter_webapi_first_course/helpers/weekday.dart';
 import 'package:flutter_webapi_first_course/models/journal.dart';
 import 'package:flutter_webapi_first_course/services/journal_service.dart';
-import 'package:uuid/uuid.dart';
 
 class AddJournalScreen extends StatefulWidget {
   final Journal journal;
-  AddJournalScreen({super.key, required this.journal});
+  const AddJournalScreen({Key? key, required this.journal}) : super(key: key);
 
   @override
   State<AddJournalScreen> createState() => _AddJournalScreenState();
 }
 
 class _AddJournalScreenState extends State<AddJournalScreen> {
-  //validar textfield
-  TextEditingController _txtController = TextEditingController();
-
-  bool _validate = false;
+  TextEditingController contentController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-            "${WeekDay(widget.journal.createdAt.weekday).long.toLowerCase()}, ${widget.journal.createdAt.day}  |  ${widget.journal.createdAt.month}  |  ${widget.journal.createdAt.year}"),
+            // TODO: Modularizar isso no helper
+            "${WeekDay(widget.journal.createdAt.weekday).long.toLowerCase()}, ${widget.journal.createdAt.day} do ${widget.journal.createdAt.month} de ${widget.journal.createdAt.year}"),
         actions: [
           IconButton(
             onPressed: () {
-              if (_txtController.text.isEmpty) {
-                setState(() {
-                  _validate = true;
-                });
-                
-              } else {
-                setState(() {
-                  _validate = false;
-                });
-                registerJournal(context);
-              }
+              registerJournal(context);
             },
             icon: const Icon(Icons.check),
           )
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8),
         child: TextField(
-          controller: _txtController,
+          controller: contentController,
           keyboardType: TextInputType.multiline,
+          style: const TextStyle(fontSize: 24),
           expands: true,
-          minLines: null,
           maxLines: null,
-          style: const TextStyle(
-            fontSize: 24,
-          ),
-          textAlignVertical: TextAlignVertical.top,
-          decoration: InputDecoration(
-              errorText: _validate ? "Insira um valor" : null,
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-              hintText: "Escreva algo"),
+          minLines: null,
         ),
       ),
     );
   }
 
-  void registerJournal(BuildContext context) async {
-    String content = _txtController.text;
-
-    JournalService servico = JournalService();
-    widget.journal.content = content;
-
-    bool resultado = await servico.register(widget.journal);
-
-    Navigator.pop(context, resultado);
+  registerJournal(BuildContext context) async {
+    JournalService journalService = JournalService();
+    widget.journal.content = contentController.text;
+    journalService.register(widget.journal).then((value) {
+      Navigator.pop(context, value);
+    });
   }
 }

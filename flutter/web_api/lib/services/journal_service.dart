@@ -1,11 +1,11 @@
 import 'dart:convert';
-import 'package:flutter_webapi_first_course/models/journal.dart';
 import 'package:flutter_webapi_first_course/services/http_interceptors.dart';
 import 'package:http/http.dart' as http;
 import 'package:http_interceptor/http/http.dart';
+import '../models/journal.dart';
 
 class JournalService {
-  static const String url = "http://192.168.15.102:3000/";
+  static const String url = "http://192.168.0.54:3000/";
   static const String resource = "journals/";
 
   http.Client client = InterceptedClient.build(
@@ -16,25 +16,43 @@ class JournalService {
     return "$url$resource";
   }
 
+  //TODO: Substituir getURL por getURI
   Future<bool> register(Journal journal) async {
-    String jsonJournal = json.encode(journal.toMap());
+    String journalJSON = json.encode(journal.toMap());
 
     http.Response response = await client.post(
-      Uri.parse(
-        getURL(),
-      ),
+      Uri.parse(getURL()),
       headers: {'Content-type': 'application/json'},
-      body: jsonJournal,
+      body: journalJSON,
     );
 
     if (response.statusCode == 201) {
       return true;
-    } else {
-      return false;
     }
+
+    return false;
   }
 
-  void get() async {
-    http.Response response = await client.get(Uri.parse(getURL()));
+  Future<List<Journal>> getAll() async {
+    http.Response response = await client.get(
+      Uri.parse(
+        getURL(),
+      ),
+    );
+
+    if (response.statusCode != 200) {
+      throw Exception();
+    }
+    List<Journal> lista = [];
+
+    List<dynamic> jsonLista = json.decode(response.body);
+
+    for (var element in jsonLista) {
+      lista.add(
+        Journal.fromMap(element),
+      );
+    }
+    print(lista.length);
+    return lista;
   }
 }
