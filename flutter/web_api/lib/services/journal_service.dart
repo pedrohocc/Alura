@@ -16,7 +16,6 @@ class JournalService {
     return "$url$resource";
   }
 
-  //TODO: Substituir getURL por getURI
   Future<bool> register(Journal journal) async {
     String journalJSON = json.encode(journal.toMap());
 
@@ -52,7 +51,6 @@ class JournalService {
         Journal.fromMap(element),
       );
     }
-    print(lista.length);
     return lista;
   }
 }
