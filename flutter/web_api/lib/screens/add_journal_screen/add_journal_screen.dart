@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_webapi_first_course/helpers/weekday.dart';
-import 'package:flutter_webapi_first_course/models/journal.dart';
-import 'package:flutter_webapi_first_course/services/journal_service.dart';
+import '../../helpers/weekday.dart';
+import '../../models/journal.dart';
+import '../../services/journal_service.dart';
 
 class AddJournalScreen extends StatefulWidget {
   final Journal journal;
@@ -16,10 +16,10 @@ class _AddJournalScreenState extends State<AddJournalScreen> {
 
   @override
   Widget build(BuildContext context) {
+    contentController.text = widget.journal.content;
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-            "${WeekDay(widget.journal.createdAt).toString()},"),
+        title: Text(WeekDay(widget.journal.createdAt).toString()),
         actions: [
           IconButton(
             onPressed: () {
@@ -47,7 +47,13 @@ class _AddJournalScreenState extends State<AddJournalScreen> {
     JournalService journalService = JournalService();
     widget.journal.content = contentController.text;
     journalService.register(widget.journal).then((value) {
-      Navigator.pop(context, value);
+      if (value) {
+        Navigator.pop(context, DisposeStatus.success);
+      } else {
+        Navigator.pop(context, DisposeStatus.error);
+      }
     });
   }
 }
+
+enum DisposeStatus { exit, error, success }

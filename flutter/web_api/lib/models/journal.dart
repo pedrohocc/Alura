@@ -19,15 +19,11 @@ class Journal {
         createdAt = DateTime.now(),
         updatedAt = DateTime.now();
 
-  Journal.fromMap(Map map)
-      : id = map["id"],
-        content = map["content"],
-        createdAt = DateTime.parse(
-          map["created_at"],
-        ),
-        updatedAt = DateTime.parse(
-          map["updated_at"],
-        );
+  Journal.fromMap(Map<String, dynamic> map)
+      : id = map['id'],
+        content = map['content'],
+        createdAt = DateTime.parse(map['created_at']),
+        updatedAt = DateTime.parse(map['updated_at']);
 
   @override
   String toString() {
