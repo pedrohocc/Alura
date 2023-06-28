@@ -37,11 +37,26 @@ class JournalService {
     return false;
   }
 
+  Future<bool> edit(String id, Journal journal) async {
+    String journalJSON = json.encode(journal.toMap());
+
+    http.Response response = await client.put(
+      Uri.parse("${getURL()}$id"),
+      headers: {'Content-type': 'application/json'},
+      body: journalJSON,
+    );
+
+    if (response.statusCode != 200) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   Future<List<Journal>> getAll() async {
     http.Response response = await client.get(getUri());
 
     if (response.statusCode != 200) {
-      //TODO: Criar uma exceção personalizada
       throw Exception();
     }
 
