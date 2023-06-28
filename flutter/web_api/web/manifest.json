@@ -1,11 +1,11 @@
 {
-    "name": "flutter_webapi_first_course",
-    "short_name": "flutter_webapi_first_course",
+    "name": "flutter_webapi_second_course",
+    "short_name": "flutter_webapi_second_course",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Projeto do primeiro curso de WebAPI da Formação Flutter",
+    "description": "Aplicação para o segundo curso de WebAPI da Formação Flutter da Alura",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

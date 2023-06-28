@@ -1,24 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_webapi_first_course/helpers/weekday.dart';
-import 'package:flutter_webapi_first_course/models/journal.dart';
 import 'package:uuid/uuid.dart';
+import '../../../helpers/weekday.dart';
+import '../../../models/journal.dart';
+import '../../add_journal_screen/add_journal_screen.dart';
 
 class JournalCard extends StatelessWidget {
   final Journal? journal;
   final DateTime showedDate;
   final Function refreshFunction;
-  const JournalCard(
-      {Key? key,
-      this.journal,
-      required this.showedDate,
-      required this.refreshFunction})
-      : super(key: key);
+  const JournalCard({
+    Key? key,
+    this.journal,
+    required this.showedDate,
+    required this.refreshFunction,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     if (journal != null) {
       return InkWell(
         onTap: () {
+          callAddJournalScreen(context, journal);
         },
         child: Container(
           height: 115,
@@ -87,31 +89,7 @@ class JournalCard extends StatelessWidget {
     } else {
       return InkWell(
         onTap: () {
-          Navigator.pushNamed(
-            context,
-            'add-journal',
-            arguments: Journal(
-              id: const Uuid().v1(),
-              content: "",
-              createdAt: showedDate,
-              updatedAt: showedDate,
-            ),
-          ).then((value) {
-            if (value == true) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text("Registro salvo com sucesso."),
-                ),
-              );
-              refreshFunction();
-            } else {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(
-                  content: Text("Houve uma falha ao registar."),
-                ),
-              );
-            }
-          });
+          callAddJournalScreen(context, journal);
         },
         child: Container(
           height: 115,
@@ -124,5 +102,41 @@ class JournalCard extends StatelessWidget {
         ),
       );
     }
+  }
+
+  callAddJournalScreen(BuildContext context, Journal? journal) {
+    Journal internJournal;
+    if (journal != null) {
+      internJournal = journal;
+    } else {
+      internJournal = Journal(
+        id: const Uuid().v1(),
+        content: "",
+        createdAt: showedDate,
+        updatedAt: showedDate,
+      );
+    }
+
+    Navigator.pushNamed(
+      context,
+      'add-journal',
+      arguments: internJournal,
+    ).then((value) {
+      refreshFunction();
+
+      if (value == DisposeStatus.success) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("Registro salvo com sucesso."),
+          ),
+        );
+      } else if (value == DisposeStatus.error) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("Houve uma falha ao registar."),
+          ),
+        );
+      }
+    });
   }
 }

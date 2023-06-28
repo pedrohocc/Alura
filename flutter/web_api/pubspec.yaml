@@ -1,5 +1,5 @@
-name: flutter_webapi_first_course
-description: Projeto do primeiro curso de WebAPI da Formação Flutter
+name: flutter_webapi_second_course
+description: Aplicação para o segundo curso de WebAPI da Formação Flutter da Alura
 
 publish_to: 'none'
 
@@ -14,10 +14,11 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   uuid: ^3.0.6
-  google_fonts: ^4.0.3
+  google_fonts: ^4.0.4
   http: ^0.13.4
   http_interceptor: ^1.0.2
   logger: ^1.1.0
+  file: ^6.1.4
 
 dev_dependencies:
   flutter_test:

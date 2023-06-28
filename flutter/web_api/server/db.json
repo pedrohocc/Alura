@@ -1,31 +1,11 @@
 {
-  "learnhttp": {
-    "content": "Olá mundo!"
-  },
+  "learnhttp": {},
   "journals": [
     {
-      "id": "8d7eabf0-b8af-11ed-b399-bbc39a709457",
-      "content": "testando boy",
-      "created_at": "2023-02-23 04:04:08.696498",
-      "updated_at": "2023-02-23 04:04:08.696498"
-    },
-    {
-      "id": "91e22d20-b8af-11ed-b399-bbc39a709457",
-      "content": "foi!!!",
-      "created_at": "2023-02-20 04:04:08.696498",
-      "updated_at": "2023-02-20 04:04:08.696498"
-    },
-    {
-      "id": "9735dab0-b8af-11ed-b399-bbc39a709457",
-      "content": "erro",
-      "created_at": "2023-03-01 04:04:08.696498",
-      "updated_at": "2023-03-01 04:04:08.696498"
-    },
-    {
-      "id": "9a6c4d90-b8af-11ed-b399-bbc39a709457",
-      "content": "vamo",
-      "created_at": "2023-02-27 04:04:08.696498",
-      "updated_at": "2023-02-27 04:04:08.696498"
+      "id": "3ce31aa0-15e3-11ee-97cb-b35949537a19",
+      "content": "z",
+      "created_at": "2023-06-22 15:24:04.860379",
+      "updated_at": "2023-06-22 15:24:04.860379"
     }
   ]
 }
