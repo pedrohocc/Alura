@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_webapi_second_course/services/journal_service.dart';
 import 'package:uuid/uuid.dart';
 import '../../../helpers/weekday.dart';
 import '../../../models/journal.dart';
@@ -82,6 +83,11 @@ class JournalCard extends StatelessWidget {
                   ),
                 ),
               ),
+              IconButton(
+                  onPressed: () {
+                    deleteJournal(context);
+                  },
+                  icon: const Icon(Icons.delete))
             ],
           ),
         ),
@@ -144,5 +150,22 @@ class JournalCard extends StatelessWidget {
         );
       }
     });
+  }
+
+  deleteJournal(BuildContext context) {
+    JournalService service = JournalService();
+    if (journal != null) {
+      service.delete(journal!.id).then(
+        (value) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('Journal excluido com sucesso!'),
+            ),
+          );
+
+          refreshFunction();
+        },
+      );
+    }
   }
 }
