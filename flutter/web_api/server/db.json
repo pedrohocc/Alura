@@ -1,5 +1,11 @@
 {
-  "learnhttp": {},
+  "users": [
+    {
+      "email": "pedro@gmail.com",
+      "password": "$2a$10$h3ZMvfa26xqm5Z1OytB1Reo90b7DkjSi9CbvVLbPdSQM7B5a1Pmsm",
+      "id": 1
+    }
+  ],
   "journals": [
     {
       "id": "7ab61d30-15ea-11ee-ae51-fd5e8c5f0d86",
