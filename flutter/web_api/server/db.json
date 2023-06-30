@@ -4,6 +4,21 @@
       "email": "pedro@gmail.com",
       "password": "$2a$10$h3ZMvfa26xqm5Z1OytB1Reo90b7DkjSi9CbvVLbPdSQM7B5a1Pmsm",
       "id": 1
+    },
+    {
+      "email": "jorge@gmail.com",
+      "password": "$2a$10$Iezo9bETxmPd8PiI1o4yZuOAgTaqoWrQWMTNJrGf9kcotRwa6PSau",
+      "id": 2
+    },
+    {
+      "email": "pedro2@gmail.com",
+      "password": "$2a$10$dOAnRB1u0Z5qc8aKupfM9OLXRYXRSunLmh0vVQRo0lJR9iCqdNuhK",
+      "id": 3
+    },
+    {
+      "email": "pedro3@gmail.com",
+      "password": "$2a$10$D8KrAcr79BTrlOY/GvukAeXrRgLMYmpX3MufA1ljEuZFaZNdmqHoO",
+      "id": 4
     }
   ],
   "journals": [
