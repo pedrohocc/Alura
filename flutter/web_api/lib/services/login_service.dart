@@ -32,7 +32,7 @@ class LoginService {
     return true;
   }
 
-  register({required String email, required String senha}) async {
+  Future<bool> register({required String email, required String senha}) async {
     http.Response response = await client.post(Uri.parse("${url}register"),
         body: {"email": email, "password": senha});
 
@@ -40,6 +40,7 @@ class LoginService {
       throw HttpException(response.body);
     }
     saveUserInfos(response.body);
+    return true;
   }
 
   saveUserInfos(String body) async {
@@ -54,10 +55,6 @@ class LoginService {
     prefs.setString("acessToken", accessToken);
     prefs.setString("email", email);
     prefs.setInt("id", id);
-
-    String? token2 = prefs.getString("acessToken");
-
-    print(token2);
   }
 }
 

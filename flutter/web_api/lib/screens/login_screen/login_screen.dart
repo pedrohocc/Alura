@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webapi_second_course/screens/commom/alert_dialog.dart';
+import 'package:flutter_webapi_second_course/screens/home_screen/home_screen.dart';
 import 'package:flutter_webapi_second_course/services/login_service.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -68,15 +69,30 @@ class LoginScreen extends StatelessWidget {
 
   login(BuildContext context) async {
     try {
-      bool response = await service.login(
-          email: emailController.text, senha: passwordController.text);
+      service
+          .login(email: emailController.text, senha: passwordController.text)
+          .then(
+        (resultadoLogin) {
+          if (resultadoLogin == true) {
+            Navigator.pushReplacementNamed(context, "home");
+          }
+        },
+      );
     } on CannotFindUser {
       showAlertDialog(context,
               content: "Deseja criar um usuário com as informações insiridas?")
           .then((value) {
         if (value != null && value == true) {
-          service.register(
-              email: emailController.text, senha: passwordController.text);
+          service
+              .register(
+                  email: emailController.text, senha: passwordController.text)
+              .then(
+            (resultadoRegister) {
+              if (resultadoRegister == true) {
+                Navigator.pushReplacementNamed(context, "home");
+              }
+            },
+          );
         }
       });
     }
