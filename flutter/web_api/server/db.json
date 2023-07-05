@@ -23,10 +23,11 @@
   ],
   "journals": [
     {
-      "id": "7ab61d30-15ea-11ee-ae51-fd5e8c5f0d86",
-      "content": "y",
-      "created_at": "2023-06-18 16:29:40.884558",
-      "updated_at": "2023-06-18 16:29:40.884558"
+      "id": 1,
+      "content": "boa quarta",
+      "created_at": "2023-07-05 16:29:40.884558",
+      "updated_at": "2023-07-05 16:29:40.884558",
+      "userId": 1
     },
     {
       "id": "901aa560-15ea-11ee-ae51-fd5e8c5f0d86",

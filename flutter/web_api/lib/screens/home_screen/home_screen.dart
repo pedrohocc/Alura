@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../models/journal.dart';
 import '../../services/journal_service.dart';
 import 'widgets/home_screen_list.dart';
@@ -60,19 +61,34 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  void refresh() async {
-    List<Journal> listJournal = await _journalService.getAll();
+  void refresh() {
+    SharedPreferences.getInstance().then(
+      (prefs) {
+        String? acessToken = prefs.getString("acessToken");
+        String? email = prefs.getString("email");
+        int? id = prefs.getInt("id");
 
-    setState(() {
-      database = {};
-      for (Journal journal in listJournal) {
-        database[journal.id] = journal;
-      }
+        if (acessToken != null && email != null && id != null) {
+          _journalService.getAll(id: id, token: acessToken).then(
+            (List<Journal> listJournal) {
+              setState(
+                () {
+                  database = {};
+                  for (Journal journal in listJournal) {
+                    database[journal.id] = journal;
+                  }
 
-      if (_listScrollController.hasClients) {
-        final double position = _listScrollController.position.maxScrollExtent;
-        _listScrollController.jumpTo(position);
-      }
-    });
+                  if (_listScrollController.hasClients) {
+                    final double position =
+                        _listScrollController.position.maxScrollExtent;
+                    _listScrollController.jumpTo(position);
+                  }
+                },
+              );
+            },
+          );
+        }
+      },
+    );
   }
 }
