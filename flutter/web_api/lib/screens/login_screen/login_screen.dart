@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_webapi_second_course/screens/commom/alert_dialog.dart';
-import 'package:flutter_webapi_second_course/screens/home_screen/home_screen.dart';
 import 'package:flutter_webapi_second_course/services/login_service.dart';
 
 class LoginScreen extends StatelessWidget {

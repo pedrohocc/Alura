@@ -36,6 +36,7 @@ class LoginService {
     http.Response response = await client.post(Uri.parse("${url}register"),
         body: {"email": email, "password": senha});
 
+    // ignore: unrelated_type_equality_checks
     if (response != 201) {
       throw HttpException(response.body);
     }

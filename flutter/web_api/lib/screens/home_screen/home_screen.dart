@@ -12,17 +12,12 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // O último dia apresentado na lista
   DateTime currentDay = DateTime.now();
-
-  // Tamanho da lista
   int windowPage = 10;
-
-  // A base de dados mostrada na lista
   Map<String, Journal> database = {};
-
   final ScrollController _listScrollController = ScrollController();
   final JournalService _journalService = JournalService();
+  int? userId;
 
   @override
   void initState() {
@@ -49,15 +44,20 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: ListView(
-        controller: _listScrollController,
-        children: generateListJournalCards(
-          windowPage: windowPage,
-          currentDay: currentDay,
-          database: database,
-          refreshFunction: refresh,
-        ),
-      ),
+      body: (userId != null)
+          ? ListView(
+              controller: _listScrollController,
+              children: generateListJournalCards(
+                userId: userId!,
+                windowPage: windowPage,
+                currentDay: currentDay,
+                database: database,
+                refreshFunction: refresh,
+              ),
+            )
+          : const Center(
+              child: CircularProgressIndicator(),
+            ),
     );
   }
 
@@ -69,6 +69,9 @@ class _HomeScreenState extends State<HomeScreen> {
         int? id = prefs.getInt("id");
 
         if (acessToken != null && email != null && id != null) {
+          setState(() {
+            userId = id;
+          });
           _journalService.getAll(id: id, token: acessToken).then(
             (List<Journal> listJournal) {
               setState(

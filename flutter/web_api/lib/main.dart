@@ -65,7 +65,7 @@ class MyApp extends StatelessWidget {
 
 Future<bool> verifyLogin() async {
   SharedPreferences preferences = await SharedPreferences.getInstance();
-  String? isLogged = await preferences.getString("acessToken");
+  String? isLogged = preferences.getString("acessToken");
   if (isLogged != null) {
     return true;
   } else {

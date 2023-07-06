@@ -21,12 +21,15 @@ class JournalService {
     return Uri.parse(getURL());
   }
 
-  Future<bool> register(Journal journal) async {
+  Future<bool> register(Journal journal, String token) async {
     String journalJSON = json.encode(journal.toMap());
 
     http.Response response = await client.post(
-      getUri(),
-      headers: {'Content-type': 'application/json'},
+      Uri.parse(getURL()),
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer $token',
+      },
       body: journalJSON,
     );
 
@@ -37,12 +40,15 @@ class JournalService {
     return false;
   }
 
-  Future<bool> edit(String id, Journal journal) async {
+  Future<bool> edit(String id, Journal journal, String token) async {
     String journalJSON = json.encode(journal.toMap());
 
     http.Response response = await client.put(
       Uri.parse("${getURL()}$id"),
-      headers: {'Content-type': 'application/json'},
+      headers: {
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer $token',
+      },
       body: journalJSON,
     );
 
