@@ -8,11 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'http_interceptors.dart';
 
 class AuthService {
-  //TODO: Modularizar essa URL para todos os services.
   static const String url = "http://192.168.0.54:3000/";
-
-  //TODO: Criar recursos para o próprio service
-
   http.Client client = InterceptedClient.build(
     interceptors: [LoggingInterceptor()],
   );
@@ -42,7 +38,6 @@ class AuthService {
     );
 
     if (response.statusCode != 200) {
-      //TODO: Implementar outros casos
       switch (response.body) {
         case "Email already exists":
           throw UserAlreadyExists();
