@@ -12,12 +12,19 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // O último dia apresentado na lista
   DateTime currentDay = DateTime.now();
+
+  // Tamanho da lista
   int windowPage = 10;
+
+  // A base de dados mostrada na lista
   Map<String, Journal> database = {};
+
   final ScrollController _listScrollController = ScrollController();
   final JournalService _journalService = JournalService();
-  int? userId;
+
+  String userId = '';
 
   @override
   void initState() {
@@ -44,54 +51,67 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: (userId != null)
-          ? ListView(
-              controller: _listScrollController,
-              children: generateListJournalCards(
-                userId: userId!,
-                windowPage: windowPage,
-                currentDay: currentDay,
-                database: database,
-                refreshFunction: refresh,
-              ),
+      body: ListView(
+        controller: _listScrollController,
+        children: generateListJournalCards(
+          userId: userId,
+          windowPage: windowPage,
+          currentDay: currentDay,
+          database: database,
+          refreshFunction: refresh,
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            ListTile(
+              leading: const Icon(Icons.logout),
+              title: const Text("Sair"),
+              onTap: () {
+                logout();
+              },
             )
-          : const Center(
-              child: CircularProgressIndicator(),
-            ),
+          ],
+        ),
+      ),
     );
   }
 
-  void refresh() {
-    SharedPreferences.getInstance().then(
-      (prefs) {
-        String? acessToken = prefs.getString("acessToken");
-        String? email = prefs.getString("email");
-        int? id = prefs.getInt("id");
+  logout() {
+    SharedPreferences.getInstance().then((sharedPreferences) {
+      sharedPreferences.remove('accessToken');
+      sharedPreferences.remove('id');
+      sharedPreferences.remove('email');
 
-        if (acessToken != null && email != null && id != null) {
+      Navigator.pushReplacementNamed(context, 'login');
+    });
+  }
+
+  void refresh() async {
+    SharedPreferences.getInstance().then((prefs) {
+      String? token = prefs.getString('accessToken');
+      String? id = prefs.getString('id');
+      String? email = prefs.getString('email');
+
+      if (token != null && id != null && email != null) {
+        _journalService.getAll(id).then((List<Journal> listJournal) {
           setState(() {
             userId = id;
-          });
-          _journalService.getAll(id: id, token: acessToken).then(
-            (List<Journal> listJournal) {
-              setState(
-                () {
-                  database = {};
-                  for (Journal journal in listJournal) {
-                    database[journal.id] = journal;
-                  }
+            database = {};
+            for (Journal journal in listJournal) {
+              database[journal.id] = journal;
+            }
 
-                  if (_listScrollController.hasClients) {
-                    final double position =
-                        _listScrollController.position.maxScrollExtent;
-                    _listScrollController.jumpTo(position);
-                  }
-                },
-              );
-            },
-          );
-        }
-      },
-    );
+            if (_listScrollController.hasClients) {
+              final double position =
+                  _listScrollController.position.maxScrollExtent;
+              _listScrollController.jumpTo(position);
+            }
+          });
+        });
+      } else {
+        Navigator.pushReplacementNamed(context, 'login');
+      }
+    });
   }
 }

@@ -1,12 +1,16 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
-import 'package:flutter_webapi_second_course/screens/commom/alert_dialog.dart';
-import 'package:flutter_webapi_second_course/services/login_service.dart';
+import 'package:flutter_webapi_second_course/screens/commom/confirmation_dialog.dart';
+import 'package:flutter_webapi_second_course/services/auth_service.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({Key? key}) : super(key: key);
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-  final LoginService service = LoginService();
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  final AuthService authService = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -39,14 +43,14 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const Text("Entre ou Registre-se"),
                   TextFormField(
-                    controller: emailController,
+                    controller: _emailController,
                     decoration: const InputDecoration(
                       label: Text("E-mail"),
                     ),
                     keyboardType: TextInputType.emailAddress,
                   ),
                   TextFormField(
-                    controller: passwordController,
+                    controller: _passwordController,
                     decoration: const InputDecoration(label: Text("Senha")),
                     keyboardType: TextInputType.visiblePassword,
                     maxLength: 16,
@@ -54,7 +58,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   ElevatedButton(
                       onPressed: () {
-                        login(context);
+                        tryLogin(context);
                       },
                       child: const Text("Continuar")),
                 ],
@@ -66,34 +70,27 @@ class LoginScreen extends StatelessWidget {
     );
   }
 
-  login(BuildContext context) async {
+  void tryLogin(BuildContext context) async {
+    String email = _emailController.text;
+    String password = _passwordController.text;
     try {
-      service
-          .login(email: emailController.text, senha: passwordController.text)
-          .then(
-        (resultadoLogin) {
-          if (resultadoLogin == true) {
-            Navigator.pushReplacementNamed(context, "home");
+      String token = await authService.login(email, password);
+      Navigator.pushReplacementNamed(context, 'home');
+    } on UserNotFoundException {
+      showConfirmationDialog(
+        context,
+        title: "Usuário ainda não existe",
+        content: "Deseja criar um novo usuário com email $email?",
+        affirmativeOption: "Criar",
+      ).then(
+        (value) async {
+          if (value) {
+            //TODO: Tratar caso do usuário não existente
+            String token = await authService.register(email, password);
+            Navigator.pushReplacementNamed(context, 'home');
           }
         },
       );
-    } on CannotFindUser {
-      showAlertDialog(context,
-              content: "Deseja criar um usuário com as informações insiridas?")
-          .then((value) {
-        if (value != null && value == true) {
-          service
-              .register(
-                  email: emailController.text, senha: passwordController.text)
-              .then(
-            (resultadoRegister) {
-              if (resultadoRegister == true) {
-                Navigator.pushReplacementNamed(context, "home");
-              }
-            },
-          );
-        }
-      });
     }
   }
 }

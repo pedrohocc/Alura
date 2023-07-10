@@ -8,12 +8,21 @@ import 'screens/home_screen/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  bool isLogged = await verifyLogin();
-  runApp(
-    MyApp(
-      isLogged: isLogged,
-    ),
-  );
+
+  bool isLogged = await verifyToken();
+
+  runApp(MyApp(isLogged: isLogged));
+}
+
+Future<bool> verifyToken() async {
+  SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+
+  //TODO: Criar uma classe de valores
+  String? token = sharedPreferences.getString('accessToken');
+  if (token != null) {
+    return true;
+  }
+  return false;
 }
 
 class MyApp extends StatelessWidget {
@@ -37,22 +46,19 @@ class MyApp extends StatelessWidget {
         ),
         textTheme: GoogleFonts.bitterTextTheme(),
       ),
-      initialRoute: (isLogged == true) ? "home" : "login",
+      initialRoute: (isLogged) ? "home" : "login",
       routes: {
         "home": (context) => const HomeScreen(),
-        "login": (context) => LoginScreen()
+        "login": (context) => LoginScreen(),
       },
       onGenerateRoute: (routeSettings) {
         if (routeSettings.name == "add-journal") {
-          Map<String, dynamic> map =
-              routeSettings.arguments as Map<String, dynamic>;
-          final Journal journal = map['journal'] as Journal;
-          final bool isEditing = map['is_editing'];
+          final map = routeSettings.arguments as Map<String, dynamic>;
           return MaterialPageRoute(
             builder: (context) {
               return AddJournalScreen(
-                journal: journal,
-                isEditing: isEditing,
+                journal: map["journal"] as Journal,
+                isEditing: map["is_editing"],
               );
             },
           );
@@ -60,15 +66,5 @@ class MyApp extends StatelessWidget {
         return null;
       },
     );
-  }
-}
-
-Future<bool> verifyLogin() async {
-  SharedPreferences preferences = await SharedPreferences.getInstance();
-  String? isLogged = preferences.getString("acessToken");
-  if (isLogged != null) {
-    return true;
-  } else {
-    return false;
   }
 }
