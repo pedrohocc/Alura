@@ -73,11 +73,12 @@ class LoginScreen extends StatelessWidget {
   void tryLogin(BuildContext context) async {
     String email = _emailController.text;
     String password = _passwordController.text;
-    try {
-      // ignore: unused_local_variable
-      String token = await authService.login(email, password);
-      Navigator.pushReplacementNamed(context, 'home');
-    } on UserNotFoundException {
+
+    authService.login(email, password).then((value) {
+      if (value) {}
+    });
+    Navigator.pushReplacementNamed(context, 'home');
+    try {} on UserNotFoundException {
       showConfirmationDialog(
         context,
         title: "Usuário ainda não existe",

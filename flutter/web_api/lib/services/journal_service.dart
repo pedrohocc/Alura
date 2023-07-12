@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:http_interceptor/http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -8,7 +7,7 @@ import '../models/journal.dart';
 import 'http_interceptors.dart';
 
 class JournalService {
-  static const String url = "http://192.168.0.54:3000/";
+  static const String url = "http://192.168.1.112:3000/";
   static const String resource = "journals/";
 
   http.Client client = InterceptedClient.build(
@@ -36,15 +35,11 @@ class JournalService {
       body: journalJSON,
     );
 
-    if (response.statusCode != 201) {
-      if (json.decode(response.body) == 'jwt expired') {
-        throw TokenExpiredException();
-      } else {
-        throw HttpException(response.body);
-      }
+    if (response.statusCode == 201) {
+      return true;
     }
 
-    return true;
+    return false;
   }
 
   Future<bool> edit(String id, Journal journal) async {
@@ -60,15 +55,11 @@ class JournalService {
       body: journalJSON,
     );
 
-    if (response.statusCode != 200) {
-      if (json.decode(response.body) == 'jwt expired') {
-        throw TokenExpiredException();
-      } else {
-        throw HttpException(response.body);
-      }
+    if (response.statusCode == 200) {
+      return true;
     }
 
-    return true;
+    return false;
   }
 
   Future<List<Journal>> getAll(String id) async {
@@ -82,6 +73,7 @@ class JournalService {
     );
 
     if (response.statusCode != 200) {
+      //TODO: Criar uma exceção personalizada
       throw Exception();
     }
 
@@ -105,15 +97,11 @@ class JournalService {
       },
     );
 
-    if (response.statusCode != 200) {
-      if (json.decode(response.body) == 'jwt expired') {
-        throw TokenExpiredException();
-      } else {
-        throw HttpException(response.body);
-      }
+    if (response.statusCode == 200) {
+      return true;
     }
 
-    return true;
+    return false;
   }
 
   Future<String> getToken() async {
@@ -125,5 +113,3 @@ class JournalService {
     return '';
   }
 }
-
-class TokenExpiredException implements Exception {}

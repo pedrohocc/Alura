@@ -16,6 +16,8 @@ void main() async {
 
 Future<bool> verifyToken() async {
   SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+
+  //TODO: Criar uma classe de valores
   String? token = sharedPreferences.getString('accessToken');
   if (token != null) {
     return true;
