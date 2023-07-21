@@ -11,4 +11,11 @@ ThemeData mainTheme = ThemeData(
     bodyMedium: TextStyle(fontSize: 16),
     bodyLarge: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
   ),
+  textButtonTheme: const TextButtonThemeData(
+    style: ButtonStyle(
+      textStyle: MaterialStatePropertyAll(
+        TextStyle(fontSize: 16),
+      ),
+    ),
+  ),
 );
