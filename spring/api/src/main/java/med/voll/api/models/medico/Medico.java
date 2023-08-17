@@ -1,4 +1,4 @@
-package med.voll.api.medico;
+package med.voll.api.models.medico;
 
 import org.hibernate.annotations.ValueGenerationType;
 
@@ -15,7 +15,7 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import med.voll.api.endereco.Endereco;
+import med.voll.api.models.endereco.Endereco;
 
 @Table(name = "medicos")
 @Entity(name = "Medico")
