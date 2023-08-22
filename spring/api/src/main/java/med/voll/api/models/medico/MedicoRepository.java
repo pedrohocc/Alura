@@ -8,4 +8,6 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
 
     Page<Medico> findAllByAtivoTrue(Pageable pageable);
 
+    Page<Medico> findAllByNome(Pageable pageable, String nome);
+
 }
