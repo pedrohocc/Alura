@@ -2,7 +2,6 @@ package main
 
 import (
 	"crud/database"
-	"crud/models"
 	"crud/routes"
 	"fmt"
 )

@@ -3,11 +3,11 @@ services:
   postgres:
     image: "postgres"
     environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=root      
+      - POSTGRES_USER=user123
+      - POSTGRES_PASSWORD=user123
+      - POSTGRES_DB=dbzin   
     ports:
-      - "5432:5432"
+      - "5533:5432"
     volumes:
       - ./migration/docker-database-initial.sql:/docker-entrypoint-initdb.d/docker-database-initial.sql   
 
