@@ -1,0 +1,11 @@
+.time {
+    text-align: center;
+    background-color: lightgreen;
+    height: 200px;
+}
+
+.time > h3 {
+    margin: 0px;
+    text-decoration: underline;
+    margin: auto;
+}
