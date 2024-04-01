@@ -21,7 +21,7 @@ class LoginFormulario(forms.Form):
     )
     
 class CadastroForms(forms.Form):
-    nome_completo=forms.CharField(
+    nome_cadastro=forms.CharField(
         label='Nome Completo',
         required=True,
         max_length=100,
@@ -58,3 +58,19 @@ class CadastroForms(forms.Form):
         max_length=70,
     )
     
+    def clean_nome_cadastro(self):
+        nome = self.cleaned_data.get('nome_cadastro')
+        
+        if " " in nome:
+            raise forms.ValidationError("O nome não pode conter espaços")
+        else:
+            return nome
+        
+    def clean_senha_confirmacao(self):
+        senha = self.cleaned_data.get('senha')
+        senha_confirmacao = self.cleaned_data.get('senha_confirmacao')
+        
+        if senha != senha_confirmacao:
+            raise forms.ValidationError("As senhas não conferem")
+        else:
+            return senha_confirmacao
